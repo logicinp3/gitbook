@@ -2,6 +2,6 @@
 description: About
 ---
 
-# About
+# README
 
-here is a about page.
+This is a book powered by [Yakir](https://yakir3.gitbook.io/gitbook-example/).
