@@ -1,38 +1,25 @@
-## Yakir gitbook
+---
+description: >-
+  Knowledge record and technology stack.
+icon: hand-wave
+---
 
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/yakir3/gitbook/ci-to-dockerhub.yml?label=actions&logo=github&logoColor=white)](https://github.com/yakir3/gitbook/actions/workflows/ci-to-dockerhub.yml)
 
 
+# Introduction
 
-This is gitbook by [Yakir](https://book.yakir.top).
-About knowledge record and technology stack.
+  This is gitbook by [Yakir](https://book.yakir.top).
+  About knowledge record and technology stack.
 
-
-**Table of Contents**
-
-<!-- toc -->
-
-- [Yakir gitbook](#yakir-gitbook)
-- [About](#about)
-  - [Using `gitbook`](#using-gitbook)
-    - [Denpendicies](#denpendicies)
-    - [Install](#install)
-
-<!-- tocstop -->
 
 ## About
+
 ### Using `gitbook`
 
-#### Denpendicies
-+ GitHub Pages
-+ Nodejs
-+ Markdown
-+ gitbook-cli
-
-
-#### Install
 ```bash
-# nodejs
+# Install denpendicies
+# Nodejs
 brew install node
 node --version
 
@@ -42,5 +29,8 @@ gitbook -V
 
 # init
 gitbook init
+
+# serve and build
+gitbook serve
 gitbook build
 ```
