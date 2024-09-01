@@ -60,8 +60,8 @@ cp ~/.vim/bundle/ex-colorschemes/colors/molokai.vim ~/.vim/colors/
 ```
 
 #### Custom
-##### SSH Config
-``` shell
+##### SSH Config(Only private)
+```bash
 # Copy ssh config
 cp InitEnvFiles/ssh/yakir.sshconfig ~/.ssh/config
 # Change private permission
@@ -74,7 +74,7 @@ cp InitEnvFiles/ssh/yakir_server.pub ~/.ssh/
 ```
 
 ##### iTerm2
-``` shell
+```bash
 # Install
 brew install iterm2
 

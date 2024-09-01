@@ -11,15 +11,15 @@
 
 
 #### VPN Tunnel
+
 ##### v2ray
 ```bash
-# v2ray
 mkdir /etc/v2ray
 cat > /etc/v2ray/config.json << "EOF"
 {
   "log": {
-    "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log",
+    "access": "/tmp/v2ray-access.log",
+    "error": "/tmp/v2ray-error.log",
     "loglevel": "warning"
   },
   "dns": {},
@@ -74,10 +74,11 @@ cat > /etc/v2ray/config.json << "EOF"
 }
 EOF
 
-docker run -d --name v2ray -v /etc/v2ray:/etc/v2ray -p 12306:12306 v2ray/official v2ray -config=/etc/v2ray/config.json
+docker run -d --name v2ray -e TZ=Asia/Shanghai -v /etc/v2ray:/etc/v2ray -p 12306:12306 v2ray/official v2ray -config=/etc/v2ray/config.json
+```
 
-
-# ipsec
+##### ipsec
+```bash
 cat > vpn.env << "EOF"
 VPN_IPSEC_PSK=ipsecpskkey1234567890
 VPN_USER=ipsec123
@@ -87,19 +88,22 @@ VPN_PASSWORD=ipsec123
 EOF
 
 docker run --name ipsecvpn --env-file ./vpn.env --restart=always -p 500:500/udp -p 4500:4500/udp -d --privileged hwdsl2/ipsec-vpn-server
+```
 
-
-# SSR
+##### SSR
+```bash
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh
 ```
 
 ##### OVS
+
 ```bash
 # 
 ```
 
-##### SSH Tunnel
-layer 2
+#### SSH Tunnel
+
+##### Layer2
 ```bash
 # 客户端执行
 ssh -o Tunnel=ethernet -w 6:6 root@[server_ip] 
@@ -115,7 +119,7 @@ ip link set br0 up
 arping -I br0 10.0.0.1
 ```
 
-layer 3
+##### Layer3
 ```bash
 ssh -o PermitLocalCommand=yes \
  -o LocalCommand="ip link set tun5 up && ip addr add 10.0.0.2/32 peer 10.0.0.1 dev tun5 " \

@@ -4,9 +4,8 @@
 
 ## APP-META
 
-* [Docker](APP-META/Docker/README.md)
-  * [Dockerfile](APP-META/Docker/Dockerfile)
-* [Dotfiles](APP-META/Dockerfile/README.md)
+* [APP-META](APP-META/README.md)
+
 
 ## CNCF
 
@@ -86,6 +85,7 @@
     * [CRI-O](CNCF/Runtime/ContainerRuntime/cri-o.md)
 * [Serverless](CNCF/Serverless/README.md)
 
+
 ## Development
 
   * [Bash](Development/Bash/README.md)
@@ -94,6 +94,23 @@
   * [Lua](Development/Lua/README.md)
   * [Node](Development/Node/README.md)
   * [Python](Development/Python/README.md)
+
+
+## Environment
+
+* [Dotfiles](Environment/Dotfiles/README.md)
+  * [dockerignore](Environment/Dotfiles/.dockerignore)
+  * [gitignore](Environment/Dotfiles/.gitignore)
+  * [Travis](Environment/Dotfiles/.travis.yml)
+* [InitEnvFiles](Environment/InitEnvFiles/README.md)
+* [Others](Environment/Others/README.md)
+  * [gitflow](Environment/Others/gitflow.md)
+  * [hosting](Environment/Others/hosting.md)
+  <!-- * [interview](Environment/Others/interview.md) -->
+  * [kube-eventer](Environment/Others/kube-eventer.md)
+  * [openssl](Environment/Others/openssl.md)
+  * [tunnel-proxy](Environment/Others/tunnel-proxy.md)
+
 
 ## Operations
 
@@ -135,6 +152,7 @@
   * [iptables](Operations/System/iptables.md)
   * [Nix](Operations/System/nix.md)
 
+
 ## Platform
 
 * [AWS](Platform/AWS/README.md)
@@ -148,15 +166,3 @@
 * [GoogleCloud](Platform/GoogleCloud/README.md)
   * [GCE](Platform/GoogleCloud/gce.md)
   * [gcloud](Platform/GoogleCloud/gcloud.md)
-
-## WorkEnv 
-
-* [WorkEnv](WorkEnv/README.md)
-* [InitEnvFiles](WorkEnv/InitEnvFiles/README.md)
-* [Others](WorkEnv/Others/README.md)
-  * [gitflow](WorkEnv/Others/gitflow.md)
-  * [hosting](WorkEnv/Others/hosting.md)
-  <!-- * [interview](WorkEnv/Others/interview.md) -->
-  * [kube-eventer](WorkEnv/Others/kube-eventer.md)
-  * [openssl](WorkEnv/Others/openssl.md)
-  * [vpn-proxy](WorkEnv/Others/vpn-proxy.md)
