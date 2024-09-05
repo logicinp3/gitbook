@@ -78,13 +78,17 @@ vimrc:
 	mkdir -p ~/.vim/colors && cp ~/.vim/bundle/ex-colorschemes/colors/molokai.vim ~/.vim/colors/
 	@echo "##### Install vimrc end   #####"
 
-BREW_BIN_PATH = $(shell dirname `which brew`)
 zshrc: oh-my-zsh
 	@echo "##### Install zshrc start #####"
 	@git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions; \
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting; \
 	cp -a $(DOTFILES)/.zshrc $(HOME)/.zshrc; \
-	sed -i "" "s#BREW_BIN_PATH#$(BREW_BIN_PATH)#" $(HOME)/.zshrc || sed -i "s#BREW_BIN_PATH#$(BREW_BIN_PATH)#" $(HOME)/.zshrc; \
+	if which brew &> /dev/null; then \
+		BREW_BIN_PATH=$$(dirname `which brew`); \
+		sed -i "" "s#BREW_BIN_PATH#$$BREW_BIN_PATH#" $(HOME)/.zshrc || sed -i "s#BREW_BIN_PATH#$$BREW_BIN_PATH#" $(HOME)/.zshrc; \
+	else \
+		sed -i "" "s#:BREW_BIN_PATH##" $(HOME)/.zshrc || sed -i "s#:BREW_BIN_PATH##" $(HOME)/.zshrc; \
+	fi; \
 	source $(HOME)/.zshrc
 	@echo "##### Install zshrc end   #####"
 
