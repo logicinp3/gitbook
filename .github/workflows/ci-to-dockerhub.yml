@@ -30,4 +30,4 @@ jobs:
         with:
           context: ./APP-META/Docker/
           push: true
-          tags: yakirinp/gitbook:latest
+          tags: yakirinp/gitbook:${{ github.sha }}
