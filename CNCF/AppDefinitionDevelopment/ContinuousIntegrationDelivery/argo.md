@@ -1,22 +1,97 @@
-### Argo CD
-#### Introduction
+---
+description: argo proj
+---
+
+## Argo Workflows
+### Introduction
 ...
 
 
-#### Deploy By Container
-##### Run by Resource
+### Deploy By Container
+#### Run by Resource
+```bash
+# version
+ARGO_WORKFLOWS_VERSION=v3.4.9
+# install
+kubectl create namespace argo
+kubectl apply -n argo -f https://github.com/argoproj/argo-workflows/releases/download/${ARGO_WORKFLOWS_VERSION}/install.yaml
+
+# switch authentication mode to server
+kubectl patch deployment \
+  argo-server \
+  --namespace argo \
+  --type='json' \
+  -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": [
+  "server",
+  "--auth-mode=server"
+]}]'
+```
+
+
+#### Run in Kubernetes
+```bash
+# add and update repo
+helm repo add argo https://argoproj.github.io/argo-helm
+helm update
+
+# get charts package
+helm fetch argo/argo-workflows --untar
+cd argo-workflows
+
+# configure and run
+vim values.yaml
+...
+helm -n cicd install argo-workflows .
+
+```
+
+### How To Use
+#### postinstallation
+```bash
+# install  cli latest version
+ARGO_WORKFLOWS_VERSION=v3.4.9
+curl -sLO https://github.com/argoproj/argo-workflows/releases/download/${ARGO_WORKFLOWS_VERSION}/argo-linux-amd64.gz
+gunzip argo-linux-amd64.gz 
+install -m 755 argo-linux-amd64 /usr/local/bin/argo && rm -f argo-linux-amd64
+
+# access argo-server 
+kubectl -n argo port-forward deployment/argo-server --address=0.0.0.0  2746:2746
+# kubectl -n argo apply -f argo-ingress.yaml
+
+```
+
+#### application
+```bash
+# example 
+argo -n argo submit -w https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml
+argo -n argo list
+argo -n argo get @latest
+
+# Steps | DAG | Artifacts etc..
+```
+
+
+## Argo CD
+
+### Introduction
+...
+
+
+### Deploy By Container
+#### Run by Resource
 ```bash
 # version
 ARGO_CD_VERSION=v2.7.9
 kubectl create namespace argocd
+
 # non-ha install
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/${ARGO_CD_VERSION}/manifests/install.yaml
+
 # ha install
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/${ARGO_CD_VERSION}/manifests/ha/install.yaml
-
 ```
 
-##### Run in Kubernetes
+#### Run in Kubernetes
 ```bash
 # add and update repo
 helm repo add argo https://argoproj.github.io/argo-helm
@@ -33,8 +108,8 @@ helm -n cicd install argocd .
 ```
 
 
-#### How To Use
-##### argocd cli
+### How To Use
+#### argocd cli
 ```bash
 # install argocd cli latest version
 curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
@@ -58,7 +133,7 @@ ARGOCD_PASSWORD=`kubectl -n argocd get secrets argocd-initial-admin-secret -ojso
 argocd login $ARGOCD_SERVER --username $ARGOCD_USERNAME --password $ARGOCD_PASSWORD
 ```
 
-##### applications in any namespace
+#### applications in any namespace
 ```bash
 # Change workload startup parameters
 kubectl -n argocd patch configmaps argocd-cmd-params-cm --type='json' -p='[{"op": "add", "path": "/data", "value": {}}, {"op": "add", "path": "/data/application.namespaces", "value": "app-team-one, app-team-two"}]' 
@@ -81,7 +156,7 @@ argocd app delete foo/bar
 argocd app manifests foo/bar
 ```
 
-##### account management
+#### account management
 ```bash
 # create user in configmaps
 kubectl -n argocd patch configmaps argocd-cm --type='json' -p='[{"op": "add", "path": "/data", "value": {}},{"op": "add", "path": "/data/accounts.yakir", "value": "apiKey, login"}]'
@@ -113,7 +188,7 @@ data:
     p, yakir, *, *, *, allow
 ```
 
-##### cluster management
+#### cluster management
 ```bash
 # get info
 argocd cluster list
@@ -123,7 +198,7 @@ argocd cluster get <cluster_name>
 argocd cluster add 
 ```
 
-##### appproj management
+#### appproj management
 ```bash
 # get info
 argocd proj list
@@ -150,7 +225,7 @@ spec:
 EOF
 ```
 
-##### repository management
+#### repository management
 ```bash
 # get info
 argocd repo list
@@ -166,7 +241,7 @@ argocd repo add https://charts.helm.sh/stable --type helm --name stable
 argocd repocreds add https://gitlab.com/your_repo/argocd.git --username git --password secret
 ```
 
-##### application management
+#### application management
 ```bash
 # get infomation
 argocd app list
@@ -217,13 +292,13 @@ argocd app sync <applications_name>
 argocd app set helm-guestbook -p service.type=LoadBalancer
 ```
 
-### Argo Workflows
-#### Introduction
+## Argo Workflows
+### Introduction
 ...
 
 
-#### Deploy By Container
-##### Run by Resource
+### Deploy By Container
+#### Run by Resource
 ```bash
 # version
 ARGO_WORKFLOWS_VERSION=v3.4.9
@@ -243,7 +318,7 @@ kubectl patch deployment \
 ```
 
 
-##### Run in Kubernetes
+#### Run in Kubernetes
 ```bash
 # add and update repo
 helm repo add argo https://argoproj.github.io/argo-helm
@@ -260,8 +335,8 @@ helm -n cicd install argo-workflows .
 
 ```
 
-#### How To Use
-##### postinstallation
+### How To Use
+#### postinstallation
 ```bash
 # install  cli latest version
 ARGO_WORKFLOWS_VERSION=v3.4.9
@@ -275,7 +350,7 @@ kubectl -n argo port-forward deployment/argo-server --address=0.0.0.0  2746:2746
 
 ```
 
-##### application
+#### application
 ```bash
 # example 
 argo -n argo submit -w https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml
@@ -285,8 +360,17 @@ argo -n argo get @latest
 # Steps | DAG | Artifacts etc..
 ```
 
+## Argo Events
+
+
+## Argo Rollouts
+
+
+
 
 > Reference:
 > 1. [Official Website](https://argoproj.github.io/)
 > 2. [Argo Workflows](https://argoproj.github.io/workflows/)
 > 3. [Argo CD](https://github.com/argoproj/argo-cd/)
+> 4. [Argo Events](https://github.com/argoproj/argo-events/)
+> 5. [Argo Rollouts](https://github.com/argoproj/argo-rollouts/)
