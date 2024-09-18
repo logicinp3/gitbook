@@ -67,7 +67,7 @@ Python Intergrated Tools -> Docstring format: Google
 ...
 
 # Create Virtualenv
-python -m venv venv
+python -m venv .venv
 
 # Output installed packages in requirements format
 pip freeze > requirements.txt
@@ -75,26 +75,22 @@ pip freeze > requirements.txt
 # Install dependencies
 pip install Django==4.1.3
 pip install -r requirements.txt
-
 ```
 
 ### poetry
+
 #### Install
 ```bash
 # Option 1(recommend)
-# Install
 curl -sSL https://install.python-poetry.org | python -
-# Upgrade
 poetry self update
 
 
 # Option 2
-# Install system binary to /usr/local/bin/pipx
 pip3 install pipx
 # Install shared tool poetry to /root/.local/bin/poetry
 /usr/local/bin/pipx install poetry
-/usr/local/bin/pipx list
-export /root/.local/bin/
+export PATH=$PATH:/root/.local/bin
 # Upgrade
 pipx upgrade poetry
 ```
@@ -147,7 +143,7 @@ poetry publish
 
 # Config poetry
 poetry config --list
-poetry config virtualenvs.create false <--local>
+poetry config virtualenvs.create true <--local>
 ```
 
 
