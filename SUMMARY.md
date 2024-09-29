@@ -64,7 +64,7 @@
     * [Ansible](CNCF/Provisioning/AutomationConfiguration/ansible/README.md)
     * [Apollo](CNCF/Provisioning/AutomationConfiguration/apollo.md)
     * [OpenStack](CNCF/Provisioning/AutomationConfiguration/openstack.md)
-    * [SaltProject](CNCF/Provisioning/AutomationConfiguration/saltstack/README.md)
+    * [SaltProject](CNCF/Provisioning/AutomationConfiguration/saltproject/README.md)
     * [Terraform](CNCF/Provisioning/AutomationConfiguration/terroform.md)
   * [ContainerRegistry](CNCF/Provisioning/ContainerRegistry/README.md)
     * [Harbor](CNCF/Provisioning/ContainerRegistry/harbor.md)
