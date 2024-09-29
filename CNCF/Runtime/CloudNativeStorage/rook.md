@@ -37,7 +37,7 @@ helm repo update
 
 # Get charts package
 # operator
-helm fetch rook/rook-ceph --untar
+helm pull rook/rook-ceph --untar
 cd rook-ceph
 
 # Configure and run
@@ -46,7 +46,7 @@ vim values.yaml
 helm -n rook-ceph install rook-ceph . --create-namespace 
 
 # create rook-cluster
-helm fetch rook/rook-ceph-cluster --untar
+helm pull rook/rook-ceph-cluster --untar
 cd rook-ceph-cluster
 helm -n rook-ceph install rook-ceph-cluster . --create-namespace
 

@@ -94,7 +94,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm update
 
 # get charts package
-helm fetch bitnami/postgresql --untar
+helm pull bitnami/postgresql --untar
 cd postgresql
 
 # configure and run

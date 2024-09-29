@@ -376,7 +376,7 @@ helm list -A
 helm package /opt/helm-charts/*
 
 # pull,fetch and push
-helm fetch --version=x.x.x rancher-stable/rancher --untar
+helm pull --version=x.x.x rancher-stable/rancher --untar
 helm push [chart] [remote] [flags]
 
 # registry

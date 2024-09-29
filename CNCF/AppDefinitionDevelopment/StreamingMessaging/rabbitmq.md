@@ -113,7 +113,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm update
 
 # get charts package
-helm fetch bitnami/rabbitmq --untar
+helm pull bitnami/rabbitmq --untar
 cd rabbitmq
 
 # configure and run

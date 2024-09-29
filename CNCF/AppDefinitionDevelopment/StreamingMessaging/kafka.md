@@ -301,7 +301,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm update
 
 # get charts package
-helm fetch bitnami/kafka --untar --version=29.3.5
+helm pull bitnami/kafka --untar --version=29.3.5
 cd kafka
 
 # configure and run

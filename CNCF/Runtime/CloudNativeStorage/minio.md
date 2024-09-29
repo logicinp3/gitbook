@@ -146,7 +146,7 @@ helm repo add minio https://helm.min.io/
 helm update
 
 # get charts package
-helm fetch minio/minio --untar
+helm pull minio/minio --untar
 cd minio
 
 # configure and run

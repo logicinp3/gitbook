@@ -28,7 +28,7 @@ helm update
 
 
 # get charts package
-helm fetch argo/argo-workflows --untar
+helm pull argo/argo-workflows --untar
 cd argo-workflows
 
 
@@ -103,7 +103,7 @@ helm repo add argo https://argoproj.github.io/argo-helm
 helm update
 
 # get charts package
-helm fetch argo/argo-cd --untar
+helm pull argo/argo-cd --untar
 cd argo-cd
 
 # configure and run

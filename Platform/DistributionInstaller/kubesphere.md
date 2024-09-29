@@ -32,7 +32,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 
 # Get charts package
-helm fetch bitnami/zookeeper --untar 
+helm pull bitnami/zookeeper --untar 
 cd zookeeper
 
 # Configure and run

@@ -59,7 +59,7 @@ helm repo add jenkinsci https://charts.jenkins.io
 helm repo update
 
 # Get charts package
-helm fetch jenkinsci/jenkins --untar  
+helm pull jenkinsci/jenkins --untar  
 cd jenkins
 
 # Configure and run

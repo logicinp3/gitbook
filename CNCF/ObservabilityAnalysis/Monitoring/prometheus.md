@@ -97,7 +97,7 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm update
 
 # get charts package
-helm fetch prometheus-community/prometheus --untar
+helm pull prometheus-community/prometheus --untar
 cd prometheus
 
 # configure and run
@@ -178,7 +178,7 @@ tar xf node_exporter-1.6.1.linux-amd64.tar.gz && rm -f node_exporter-1.6.1.linux
 # helm
 # node_exporter: include prometheus chart package
 # black_exporter
-helm fetch --untar prometheus-community/prometheus-blackbox-exporter
+helm pull --untar prometheus-community/prometheus-blackbox-exporter
 ```
 
 

@@ -107,7 +107,7 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm update
 
 # get charts package
-helm fetch grafana/grafana --untar
+helm pull grafana/grafana --untar
 cd grafana
 
 # configure and run

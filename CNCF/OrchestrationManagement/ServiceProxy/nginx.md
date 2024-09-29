@@ -203,7 +203,7 @@ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm update
 
 # get charts package
-helm fetch ingress-nginx/ingress-nginx --untar
+helm pull ingress-nginx/ingress-nginx --untar
 cd ingress-nginx
 
 # configure and run

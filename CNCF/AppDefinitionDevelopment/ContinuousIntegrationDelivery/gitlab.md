@@ -69,7 +69,7 @@ helm repo add gitlab https://charts.gitlab.io/
 helm repo update
 
 # Get charts package
-helm fetch gitlab/gitlab --untar  
+helm pull gitlab/gitlab --untar  
 cd gitlab
 
 # Configure and run

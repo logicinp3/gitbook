@@ -121,7 +121,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm update
 
 # get charts package
-helm fetch bitnami/mongodb --untar
+helm pull bitnami/mongodb --untar
 cd mongodb
 
 # configure and run

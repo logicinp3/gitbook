@@ -38,7 +38,7 @@ helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
 helm repo update
 
 # Get charts package
-helm fetch rancher-stable/rancher --untar
+helm pull rancher-stable/rancher --untar
 cd rancher
 
 # Configure and run

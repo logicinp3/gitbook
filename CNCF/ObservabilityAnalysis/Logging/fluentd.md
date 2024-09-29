@@ -58,7 +58,7 @@ helm repo add fluent https://fluent.github.io/helm-charts
 helm update
 
 # get charts package
-helm fetch fluent/fluentd --untar
+helm pull fluent/fluentd --untar
 cd fluentd
 
 # configure and run

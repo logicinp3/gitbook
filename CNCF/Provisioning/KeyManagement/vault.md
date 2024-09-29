@@ -126,7 +126,7 @@ helm repo add hashicorp https://helm.releases.hashicorp.com
 helm update
 
 # get charts package
-helm fetch hashicorp/vault --untar
+helm pull hashicorp/vault --untar
 cd vault
 
 # configure and run

@@ -75,7 +75,7 @@ helm repo add coredns https://coredns.github.io/helm
 helm repo update
 
 # Get charts package
-helm fetch coredns/coredns --untar
+helm pull coredns/coredns --untar
 cd coredns
 
 # Configure and run

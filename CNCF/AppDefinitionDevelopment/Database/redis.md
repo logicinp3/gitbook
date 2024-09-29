@@ -149,9 +149,9 @@ helm update
 
 # get charts package
 # single mode
-helm fetch bitnami/redis --untar
+helm pull bitnami/redis --untar
 # cluster mode
-helm fetch bitnami/redis-cluster  --untar
+helm pull bitnami/redis-cluster --untar
 
 # configure and run
 vim values.yaml

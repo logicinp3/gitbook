@@ -103,7 +103,7 @@ kubectl apply -f csi-nfs-client.yaml
 helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
 helm repo update
 
-helm fetch nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --untar
+helm pull nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --untar
 cd nfs-subdir-external-provisioner
 
 # config

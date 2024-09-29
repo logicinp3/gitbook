@@ -89,7 +89,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm update
 
 # get charts package
-helm fetch bitnami/mysql --untar
+helm pull bitnami/mysql --untar
 cd mysql
 
 # configure and run

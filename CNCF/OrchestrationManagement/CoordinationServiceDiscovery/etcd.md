@@ -138,7 +138,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 
 # Get charts package
-helm fetch bitnami/etcd --untar    
+helm pull bitnami/etcd --untar    
 cd etcd
 
 # Configure and run

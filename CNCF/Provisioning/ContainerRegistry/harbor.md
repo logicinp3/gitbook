@@ -24,7 +24,7 @@ helm repo add harbor https://helm.goharbor.io
 helm update
 
 # get charts package
-helm fetch harbor/harbor --untar
+helm pull harbor/harbor --untar
 cd harbor
 
 # configure and run
