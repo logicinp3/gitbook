@@ -6,7 +6,7 @@ description: Envoy
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # download source
@@ -24,7 +24,7 @@ EOF
 ./envoy -c /opt/envoy/config.yaml
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 [[cc-docker|Docker常用命令]]
 ```bash

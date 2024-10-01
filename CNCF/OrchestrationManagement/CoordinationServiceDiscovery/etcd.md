@@ -6,7 +6,7 @@ description: Etcd
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # built from source
@@ -87,7 +87,7 @@ etcdctl  --endpoints http://x.x.x.x:2379 --user=root --password=9A4mEZmkjU put y
 etcdctl get yakir-key
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 [[cc-docker|Docker常用命令]]
 ```bash

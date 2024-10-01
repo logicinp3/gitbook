@@ -6,7 +6,7 @@ description: Jenkins
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # download and decompression
@@ -23,7 +23,7 @@ cat /opt/jenkins-config/secrets/initialAdminPassword
 # https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 [[cc-docker|Docker常用命令]]
 ```bash

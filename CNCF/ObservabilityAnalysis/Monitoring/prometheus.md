@@ -6,7 +6,8 @@ description: Prometheus
 ...
 
 
-## Deploy On Binaries
+## Deploy With Binary
+
 ### Quick Start
 ```bash
 # download source and decompress
@@ -30,6 +31,7 @@ curl 127.0.0.1:9090/-/reload -X POST
 ```
 
 ### Config and Boot
+
 #### [[sc-monitoring|Prometheus Config]]
 
 #### Boot(systemd)
@@ -75,7 +77,8 @@ job_service:rpc_durations_seconds_count:avg_rate5m
 ```
 
 
-## Deploy On Container
+## Deploy With Container
+
 ### Run in Docker
 ```bash
 mkdir /opt/prometheus
@@ -133,12 +136,14 @@ helm -n monitoring install prometheus .
 
 
 ## Visualization
+
 ### [[grafana|Grafana]]
 
 ### [console template](https://prometheus.io/docs/visualization/consoles/)
 
 
 ## AlertManager
+
 ### Quick Start
 ```bash
 # baniry
@@ -163,6 +168,7 @@ cd /opt/prometheus/alertmanager/
 
 
 ## Metrics exporter
+
 ### node_exporter
 Download and Install
 ```bash

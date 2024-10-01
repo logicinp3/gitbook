@@ -5,7 +5,7 @@ description: Logstash
 ## Introduction
 ...
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # 1.download and decompression
@@ -57,7 +57,7 @@ systemctl enable .service
 ```
 
 
-## Deploy By Container
+## Deploy With Container
 ### Run by Resource
 ```bash
 # https://docs.fluentd.org/container-deployment/kubernetes

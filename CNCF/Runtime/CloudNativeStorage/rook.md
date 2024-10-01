@@ -6,7 +6,7 @@ description: Rook
 ...
 
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 # run by docker or docker-compose

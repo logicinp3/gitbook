@@ -5,7 +5,7 @@ description: Terraform
 ## Introduction
 ...
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Install
 ```bash
 # package
@@ -104,7 +104,7 @@ terraform state list
 terraform output
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 # docker container

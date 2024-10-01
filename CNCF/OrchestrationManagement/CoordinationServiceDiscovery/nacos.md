@@ -6,7 +6,7 @@ description: Nacos
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # download source
@@ -29,7 +29,7 @@ sh startup.sh -m standalone
 sh startup.sh 
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 [[cc-docker|Docker常用命令]]
 ```bash

@@ -6,7 +6,7 @@ description: Harbor
 ...
 
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 # download offline or online installer and verify

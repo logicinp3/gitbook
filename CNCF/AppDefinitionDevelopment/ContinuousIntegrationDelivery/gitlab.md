@@ -6,7 +6,7 @@ description: GitLab
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # Run On SourceCode
@@ -26,7 +26,7 @@ GITLAB_ROOT_PASSWORD="passwOrd123" EXTERNAL_URL="http://gitlab.yakir.com" apt in
 cat /etc/gitlab/initial_root_password
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 # run container

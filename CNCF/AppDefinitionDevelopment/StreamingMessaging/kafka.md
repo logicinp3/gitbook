@@ -5,7 +5,7 @@ description: Apache Kafka
 ## Introduction
 ...
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 #### ZooKeeper Mode
 [[zookeeper|zookeeper-deploy]]
@@ -283,7 +283,7 @@ systemctl enable kafka.service
 ### Verify
 [[StreamingMessaging#Kafka|Kafka Command]]
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 docker pull apache/kafka:3.7.1

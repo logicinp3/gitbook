@@ -6,7 +6,7 @@ description: MySQL
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # download source with boost lib
@@ -76,7 +76,7 @@ apt install pkg-config
 ```
 
 
-## Deploy By Container
+## Deploy With Container
 ### Run by Resource
 ```bash
 #

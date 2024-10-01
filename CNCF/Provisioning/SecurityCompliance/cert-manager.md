@@ -6,7 +6,7 @@ description: cert-manager
 ...
 
 
-## Deploy By Container
+## Deploy With Container
 
 ### Run in Docker
 ```bash

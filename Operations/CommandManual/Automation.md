@@ -1,4 +1,5 @@
 ## ansible
+
 ### inventory
 ```bash
 # initial: for initalize the system
@@ -371,6 +372,7 @@ ansible-playbook playbooks/example.yml --vault-id pwd.vault
 ```
 
 ## saltstack
+
 ### minion keys
 ```bash
 # select all keys

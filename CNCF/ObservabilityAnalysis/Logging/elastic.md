@@ -5,7 +5,7 @@ description: argo proj
 ## Introduction
 ...
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # download and decompression
@@ -105,7 +105,7 @@ systemctl start elasticsearch.service
 systemctl enable elasticsearch.service
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run on Helm
 ```bash
 # add and update repo

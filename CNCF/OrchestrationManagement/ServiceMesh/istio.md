@@ -5,7 +5,7 @@ description: Istio
 ## Introduction
 ...
 
-## Deploy By Binaries
+## Deploy With Binary
 ```bash
 # 1.download and decompression
 https://www.elastic.co/downloads/logstash
@@ -20,7 +20,7 @@ bin/logstash -f logstash.conf
 
 [[sc-logstash|Logstash Config]]
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Kubernetes
 ```bash
 # add and update repo

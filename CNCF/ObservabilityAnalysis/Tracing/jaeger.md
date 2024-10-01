@@ -8,7 +8,7 @@ description: Jaeger
 
 https://www.jaegertracing.io/docs/1.45/#about
 
-## Deploy On Container
+## Deploy With Container
 ### Run in Docker
 all-in-one 部署，用于测试环境
 ```bash
@@ -29,7 +29,7 @@ docker run -d --name jaeger \
 ```
 
 
-### Deploy On Kubernetes
+### Run in Kubernetes
 >Must be installed: ingress & cert-manager
 
 **deploy by kubenertes manifest**

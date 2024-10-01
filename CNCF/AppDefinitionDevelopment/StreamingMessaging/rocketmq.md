@@ -6,7 +6,7 @@ description: RocketMQ
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # option1: compile source install
@@ -388,7 +388,7 @@ export NAMESRV_ADDR=localhost:9876
 ```
 
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 # pull image

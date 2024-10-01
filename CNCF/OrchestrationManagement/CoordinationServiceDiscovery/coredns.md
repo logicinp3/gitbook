@@ -6,7 +6,7 @@ description: CoreDNS
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # get and run from source
@@ -55,7 +55,7 @@ systemctl start coredns.service
 systemctl enable coredns.service
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 [[cc-docker|Docker常用命令]]
 ```bash

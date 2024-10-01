@@ -6,7 +6,7 @@ description: Zookeeper
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # download source
@@ -69,7 +69,7 @@ systemctl start zookeeper.service
 systemctl enable zookeeper.service
 ```
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 [[cc-docker|Docker Command]]
 ```bash

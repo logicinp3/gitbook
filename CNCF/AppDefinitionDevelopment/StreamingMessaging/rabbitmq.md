@@ -6,7 +6,7 @@ description: RabbitMQ
 ...
 
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # dependencies: install erlang
@@ -90,7 +90,7 @@ Erlang (SMP,ASYNC_THREADS) (BEAM) emulator version 13.2.2.2
 ```
 
 
-## Deploy By Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 # pull image

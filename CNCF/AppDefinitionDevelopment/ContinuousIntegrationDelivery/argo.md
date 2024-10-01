@@ -7,7 +7,7 @@ description: argo proj
 ...
 
 
-### Deploy By Container
+### Deploy With Container
 #### Run by Resource
 ```bash
 # version
@@ -82,7 +82,7 @@ argo -n argo get @latest
 ...
 
 
-### Deploy By Container
+### Deploy With Container
 #### Run by Resource
 ```bash
 # version

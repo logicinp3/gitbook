@@ -6,7 +6,7 @@ description: Fluent
 ### Introduction
 ...
 
-### Deploy By Binaries
+### Deploy With Binary
 #### Quick Start
 ```bash
 # Ubuntu Package install
@@ -45,7 +45,7 @@ fluentd -c fluentd.conf --dry-run
 ```
 
 
-### Deploy By Container
+### Deploy With Container
 #### Run by Resource
 ```bash
 # https://docs.fluentd.org/container-deployment/kubernetes
@@ -86,7 +86,7 @@ Fluent Bit 在设计时就考虑了高性能和低资源消耗。
 **Fluent Bit & Fluentd 区别**
 Fluentd 和 Fluent Bit 都可以充当聚合器或转发器，它们可以互补使用或单独用作为解决方案。[详情](https://hulining.gitbook.io/fluentbit/about/fluentd-and-fluent-bit)
 
-### Deploy By Binaries
+### Deploy With Binary
 ```bash
 # source code download
 https://docs.fluentbit.io/manual/installation/getting-started-with-fluent-bit

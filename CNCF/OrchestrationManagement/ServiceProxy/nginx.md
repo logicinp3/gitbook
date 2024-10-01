@@ -5,7 +5,7 @@ description: Nginx
 ## Introduction
 ...
 
-## Deploy By Binaries
+## Deploy With Binary
 ### Quick Start
 ```bash
 # Ubuntu Package install
@@ -173,7 +173,7 @@ cp -ar lua-resty-core/lib/resty/* /usr/local/luajit2/share/luajit-2.1.0-beta3/re
 cp -ar lua-resty-lrucache/lib/resty/* /usr/local/luajit2/share/luajit-2.1.0-beta3/resty/
 ```
 
-## Deploy On Container
+## Deploy With Container
 ### Run in Docker
 ```bash
 docker run xxx
