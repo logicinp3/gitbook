@@ -11,6 +11,12 @@
 ## CNCF
 
 * [Overview](CNCF/README.md)
+* [CNAI](CNCF/CNAI/README.md)
+  * [DataArchitecture](CNCF/CNAI/DataArchitecture/README.md)
+    * [ClickHouse](CNCF/CNAI/DataArchitecture/clickhouse.md)
+  * [DataScience](CNCF/CNAI/DataScience/README.md)
+    * [PyTorch](CNCF/CNAI/DataScience/pytorch.md)
+    * [TensorFlow](CNCF/CNAI/DataScience/tensorflow.md)
 * [AppDefinition and Development](CNCF/AppDefinitionDevelopment/README.md)
   * [Application & DefinitionImageBuild](CNCF/AppDefinitionDevelopment/ApplicationDefinitionImageBuild/README.md)
     * [Helm](CNCF/AppDefinitionDevelopment/ApplicationDefinitionImageBuild/helm.md)
@@ -39,6 +45,7 @@
     * [Logstash](CNCF/ObservabilityAnalysis/Logging/logstash.md)
   * [Monitoring](CNCF/ObservabilityAnalysis/Monitoring/README.md)
     * [Grafana](CNCF/ObservabilityAnalysis/Monitoring/grafana.md)
+    * [Loki](CNCF/ObservabilityAnalysis/Monitoring/loki.md)
     * [Prometheus](CNCF/ObservabilityAnalysis/Monitoring//prometheus.md)
   * [Tracing](CNCF/ObservabilityAnalysis/Tracing/README.md)
     * [Jaeger](CNCF/ObservabilityAnalysis/Tracing/jaeger.md)
