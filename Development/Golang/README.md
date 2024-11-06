@@ -758,7 +758,103 @@ func main() {
 
 #### defer
 ```go
+// example: close open file socket
+fileObj, err:=os.Open("./t.txt")
+if err != nil {
+    fmt.Println("Open file failed, error: ",err)
+}
+defer fileObj.Close()
 
+
+// excution order: fifo
+fmt.Println("test01")
+defer fmt.Println("test02")
+fmt.Println("test03")
+defer fmt.Println("test04")
+fmt.Println("test05")
+
+
+// copy mechanism
+func main() {
+    x := 10
+    defer func(a int) {
+      fmt.Println(a)
+    }(x)
+    x++
+}
+
+
+// defer return
+/*
+    return first step: rval=xxx
+    execute defer
+    return second step: ret rval
+*/
+func f1() *int {
+    i := 5
+    defer func() {
+        i++
+        fmt.Printf(":::%p\n", &i)
+    }()
+    fmt.Printf(":::%p\n", &i)
+    return &i    // 5
+}
+func f2() (result int) {
+    defer func() {
+        result++
+    }()
+    return 5    // 6
+}
+func f3() (result int) {
+    defer func() {
+        result++
+    }()
+    return result  // 1
+}
+func f4() (r int) {
+    fmt.Println(&r)
+    defer func(r int) {
+        r = r + 1
+        fmt.Println(&r)
+    }(r)
+    return 5    // rval=5, defer func, ret rval
+}
+```
+
+#### recursive function
+```go
+/*
+递归特性:
+1. 调用自身函数。
+2. 必须有一个明确的结束条件。
+3. 在计算机中函数调用通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。由于栈的大小不是无限的，递归调用的次数过多，会导致栈溢出。
+*/
+
+// example 1
+func factorial(n int)int{
+    if n == 0{
+        return 1
+    }
+    return n * factorial(n-1)
+}
+func main() {
+    var ret = factorial(4)
+    fmt.Println(ret)
+}
+
+
+// example 2
+func fib(n int) int {
+    if n == 2 || n == 1 {
+        return 1
+    }
+    return fib(n-1) + fib(n-2)
+
+}
+func main() {
+    ret := fib(6)
+    fmt.Println(ret)
+}
 ```
 
 
